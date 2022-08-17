@@ -1,7 +1,10 @@
 ### Общие сведения
-Задание заключается в дополнении готового микросервиса JWT авторизацией.
+Коллекция [Postman](https://www.getpostman.com/collections/914bdb90302845426060)  
 
-Обновлённая коллекция [Postman](https://www.getpostman.com/collections/914bdb90302845426060)
+Репозиторий содержит api-сервис, написанный на FastAPi.
+Базы данных:
+- PostgreSQL в качестве хранилища постов и данных пользователей
+- Redis как кэш JWT токенов
 
 Во время работы сервиса возникает единовременный не критический SAWarning из-за  
 использования execute метода sqlmodel.
@@ -13,13 +16,13 @@
 
 1. Клонировать репозиторий и перейти в корневой каталог задания
 ```bash
-git clone https://github.com/Wayfarer545/Y_LAB/ && cd Y_LAB/week_4
+git clone https://github.com/Wayfarer545/FastAPI_JWT && cd FastAPI_JWT
 ```
 2. Для использования сервиса необходимо обозначить каталог монтирования базы данных Postgres  
 в файле docker-compose:
 ```yaml
   ylab_postgres_db:
-    container_name: ylab_postgres_db
+    container_name: my_postgres_db
     image: postgres:latest
     volumes:
       - /path/to/db:/var/lib/postgresql/data/
