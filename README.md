@@ -1,25 +1,18 @@
 ### Общие сведения
-Коллекция [Postman](https://www.getpostman.com/collections/914bdb90302845426060)  
 Python 3.8+
 
-Репозиторий содержит api-сервис, написанный на FastAPi.  
+О репе: круд с jwt авторизацией (access+refresh), написанный в качестве тестового задания.  
 
 Базы данных:
 - PostgreSQL в качестве хранилища постов и данных пользователей
 - Redis как кэш JWT токенов  
 Упраление postgres через alembic и sqlmodel.  
 
-Примечание: Во время работы сервиса возникает единовременный не критический SAWarning из-за  
-использования execute метода sqlmodel.
 
 ### Начало работы:  
-Зависимости:
-- Docker
-- Docker-compose
-
 1. Клонировать репозиторий и перейти в корневой каталог задания
 ```bash
-git clone https://github.com/Wayfarer545/FastAPI_JWT && cd FastAPI_JWT
+git clone https://github.com/Wayfarer545/FastAPI_crud_jwt && cd FastAPI_crud_jwt
 ```
 2. Для использования сервиса необходимо обозначить каталог монтирования базы данных Postgres  
 в файле docker-compose:
